@@ -5,6 +5,11 @@ import (
 	"time"
 )
 
+// thread blocking 
+// locking object ?
+// <- c // read from channel
+// c <- 1 // write to channel
+
 func add(c chan int, a int, b int) {
 	result := a + b
 	c <- result
