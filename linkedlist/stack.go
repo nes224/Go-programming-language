@@ -21,6 +21,23 @@ func (stack *Stack) Push(element *Element) {
 	stack.elementCount = stack.elementCount + 1
 }
 
+func (stack *Stack) Pop() *Element {
+	if stack.elementCount == 0 {
+		return nil
+	}
+
+	var length int = len(stack.elements)
+	var element *Element = stack.elements[length - 1]
+	if length > 1 {
+		stack.elements = stack.elements[:length - 1]
+
+	} else {
+		stack.elements = stack.elements[0:]
+	}
+	stack.elementCount = len(stack.elements)
+	return element
+}
+
 func main() {
 	var stack *Stack = &Stack{}
 	stack.New()
