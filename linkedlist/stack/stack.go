@@ -51,4 +51,5 @@ func main() {
 	stack.Push(element4)
 	fmt.Println("Read memory address:",&stack.elementCount)
 	fmt.Println("Read d referencing:",*&stack.elementCount)
+	fmt.Println(stack.Pop(), stack.Pop(), stack.Pop(), stack.Pop())
 }
