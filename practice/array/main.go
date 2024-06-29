@@ -2,5 +2,6 @@ package main
 
 func main() {
 	// print2DArray()
-	appendToSlice()
+	// appendToSlice()
+	slices()
 }
