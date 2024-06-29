@@ -4,5 +4,6 @@ func main() {
 	// print2DArray()
 	// appendToSlice()
 	// slices()
-	maps()
+	// maps()
+	twodslices()
 }
