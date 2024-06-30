@@ -15,6 +15,8 @@ func (s *MyStack) prepareStack(n int) {
 }
 
 func (s *MyStack) Pop() {
+	s.mu.Lock()
+	defer s.mu.Unlock()
 	l := len(s.items) - 1
 	s.items = s.items[:l]
 }
