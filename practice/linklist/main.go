@@ -2,5 +2,6 @@ package main
 
 func main(){
 	// Stack()
-	Queue()
+	// Queue()
+	Tuples()
 }
