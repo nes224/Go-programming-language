@@ -1,6 +1,7 @@
 package main
 
 func main() {
-	structFunc()
-	goroutineFunc1()
+	// structFunc()
+	// goroutineFunc1()
+	goroutineFunc2()
 }
