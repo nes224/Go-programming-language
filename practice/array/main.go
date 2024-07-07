@@ -5,5 +5,6 @@ func main() {
 	// appendToSlice()
 	// slices()
 	// maps()
-	twodslices()
+	// twodslices()
+	twodSliceStack()
 }
