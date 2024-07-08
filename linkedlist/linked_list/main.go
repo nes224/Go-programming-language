@@ -26,6 +26,9 @@ func (l *linkedList) prepend (n *node) {
 	l.length++
 }
 
+// receiver value
+// Value receiver
+// receiver method ประเภทนี้จะใช้วิธีการ copy value และ สร้างตัวแปรใหม่เพื่อเก็บค่า และ จะไม่มี side effect ไปยัง memory address ของตัวแปรต้นทาง
 func (l linkedList) printListdata() {
 	toPrint := l.head
 	for l.length != 0 {
@@ -35,7 +38,8 @@ func (l linkedList) printListdata() {
 	}
 	fmt.Printf("\n")
 }
-
+// Pointer receiver
+// ใช้วิธีการสร้างตัวแปรเก็บ Address เพื่อทำการ Dereference ตัวแปรเดิมเสมอ วิธีการนี้ใช้ตำแหน่งของ memory address เดิมในการอ่าน และ เขียน
 // Golang string literals
 // Interpreted String Literals ""
 // escape sequences -> \n, \t, \
