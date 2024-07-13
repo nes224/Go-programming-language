@@ -1,5 +1,6 @@
 package main 
 
 func main(){
-	circular_list()
+	// circular_list()
+	hashFunc()
 }
