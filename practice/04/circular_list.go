@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func circular_list() {
 	var integers []int
 	integers = []int{1, 3, 5, 7}
 
