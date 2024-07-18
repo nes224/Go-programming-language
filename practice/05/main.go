@@ -1,6 +1,7 @@
 package main
 
 func main() {
-	boolMatrix()
-	columnMatrix()
+	// boolMatrix()
+	// columnMatrix()
+	identity()
 }
