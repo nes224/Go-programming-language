@@ -3,5 +3,7 @@ package main
 func main() {
 	// boolMatrix()
 	// columnMatrix()
-	identity()
+	// identity()
+	// multidarray()
+	tensor()
 }
