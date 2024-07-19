@@ -5,5 +5,6 @@ func main() {
 	// columnMatrix()
 	// identity()
 	// multidarray()
-	tensor()
+	// tensor()
+	twodmatrix()
 }
