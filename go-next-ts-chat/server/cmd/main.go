@@ -6,6 +6,7 @@ import (
 	"github.com/gochat/db"
 	"github.com/gochat/internal/user"
 	"github.com/gochat/router"
+	"github.com/gochat/ws"
 )
 
 func main() {
@@ -18,6 +19,9 @@ func main() {
 	userSvc := user.NewService(userRep)
 	userHandler := user.NewHandler(userSvc)
 
-	router.InitRouter(userHandler)
+	hub := ws.NewHub()
+	wsHandler := ws.NewHandler(hub)
+
+	router.InitRouter(userHandler, wsHandler)
 	router.Start("0.0.0.0:8090")
 }
