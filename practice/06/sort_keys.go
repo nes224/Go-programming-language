@@ -1,8 +1,8 @@
 package main
 
 import (
-	"sort"
 	"fmt"
+	"sort"
 )
 
 type Mass float64
@@ -57,22 +57,30 @@ func main() {
 		return Thing1.name < Thing2.name
 	}
 
-	var mass func(*Thing, *Thing) bool 
+	var mass func(*Thing, *Thing) bool
 	mass = func(Thing1 *Thing, Thing2 *Thing) bool {
 		return Thing1.distance < Thing2.distance
 	}
 
-	var distance func(*Thing, *Thing) bool 
-	distance = func(Thing1 *Thing,Thing2 *Thing) bool {
+	var distance func(*Thing, *Thing) bool
+	distance = func(Thing1 *Thing, Thing2 *Thing) bool {
 		return Thing1.distance < Thing2.distance
+	}
+
+	var decreasingDistance func(*Thing, *Thing) bool
+	decreasingDistance = func(p1, p2 *Thing) bool {
+		return distance(p2, p1)
 	}
 
 	ByFactor(name).Sort(Things)
 	fmt.Println("By name:", Things)
 
 	ByFactor(mass).Sort(Things)
-	fmt.Println("By mass:",Things)
+	fmt.Println("By mass:", Things)
 
 	ByFactor(distance).Sort(Things)
-	fmt.Println("By distance:",Things)
+	fmt.Println("By distance:", Things)
+
+	ByFactor(decreasingDistance).Sort(Things)
+	fmt.Println("By decreasing distance:", Things)
 }
