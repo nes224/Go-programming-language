@@ -62,10 +62,17 @@ func main() {
 		return Thing1.distance < Thing2.distance
 	}
 
+	var distance func(*Thing, *Thing) bool 
+	distance = func(Thing1 *Thing,Thing2 *Thing) bool {
+		return Thing1.distance < Thing2.distance
+	}
+
 	ByFactor(name).Sort(Things)
 	fmt.Println("By name:", Things)
 
 	ByFactor(mass).Sort(Things)
 	fmt.Println("By mass:",Things)
 
+	ByFactor(distance).Sort(Things)
+	fmt.Println("By distance:",Things)
 }
