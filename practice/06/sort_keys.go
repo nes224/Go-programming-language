@@ -2,6 +2,7 @@ package main
 
 import (
 	"sort"
+	"fmt"
 )
 
 type Mass float64
@@ -56,5 +57,15 @@ func main() {
 		return Thing1.name < Thing2.name
 	}
 
+	var mass func(*Thing, *Thing) bool 
+	mass = func(Thing1 *Thing, Thing2 *Thing) bool {
+		return Thing1.distance < Thing2.distance
+	}
+
 	ByFactor(name).Sort(Things)
+	fmt.Println("By name:", Things)
+
+	ByFactor(mass).Sort(Things)
+	fmt.Println("By mass:",Things)
+
 }
